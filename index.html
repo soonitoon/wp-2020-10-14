@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head lang="ko">
+
+<html>
+<body>    
+    <div class="main-container">
+      <head>
+        <meta charset="utf-8">
+        <title>wp-homework</title>
+        <link rel="stylesheet "href="css/index.css">
+      </head>
+      <body>
+        <header>
+          <div class="menu">  
+            <div class=" menu-bar">
+                <button id="menu-button1">메뉴1</button>
+                <button id="menu-button2">메뉴2</button>
+                <button id="menu-button3">메뉴3</button>
+            </div>
+            <div class="menu-content">
+                <div  class="hidden content" id="content1">
+                  <ul>
+                    <li>content1</li>
+                    <li>content2</li>
+                    <li>content3</li>
+                  </ul>
+                </div>
+                <div  class="hidden content" id="content2">
+                  <ul>
+                    <li>content1</li>
+                    <li>content2</li>
+                    <li>content3</li>
+                  </ul>
+                </div>
+                <div  class="hidden content" id="content3">
+                  <ul>
+                    <li>content1</li>
+                    <li>content2</li>
+                    <li>content3</li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+          <div class="page-name">
+            <img src="https://orchardinn.com/wp-content/uploads/2020/03/Waynesville-Smoky-Mountains-1500x609.jpg" width="700px" height="250px">
+            <div class="name-h1">My HomePage</div>
+            <div class="name-lorem">Lorem, ipsum dolor...</div>
+          </div>
+        </header>
+        <section>
+          <div class="section1">
+            <h1>Section1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit odio magnam a blanditiis consectetur iste ut eligendi. Officia dolore atque tenetur quod ut. Facere officia perspiciatis cupiditate hic quam praesentium impedit laudantium dicta aliquid nesciunt a, culpa ex asperiores ratione saepe necessitatibus voluptatibus sit. Dolorum quam excepturi odio blanditiis perferendis.</p>
+          </div>
+          <div class="photo">
+            <img src="https://hips.hearstapps.com/countryliving.cdnds.net/17/47/1511194376-cavachon-puppy-christmas.jpg" width="150px" height="150px">
+          </div>
+          <div class="section2">
+            <h1>Section2</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum earum minima placeat non, dignissimos expedita, ea eaque sunt rerum quisquam! Illo amet quae tempora molestiae necessitatibus nam minima qui.</p>
+          </div>
+          <div class="aside">
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laborum non nostrum doloremque nemo fugit quasi architecto repudiandae veniam voluptate. Sint cumque libero nobis eligendi sit consequatur at ad incidunt, ab beatae qui dolor adipisci cupiditate corporis dolorum, consectetur porro?</p>
+          </div>
+        </section>
+        <footer>
+          <div class="copyright">
+            <i>copyright Ⓒ</i>
+          </div>
+        </footer>
+    </div>
+    <script>
+      let hidden = true;
+
+      const  menuButton1 = document.getElementById('menu-button1');
+      const  menuButton2 = document.getElementById('menu-button2');
+      const  menuButton3 = document.getElementById('menu-button3');
+
+      const  content1 = document.getElementById('content1');
+      const  content2 = document.getElementById('content2');
+      const  content3 = document.getElementById('content3');
+
+      menuButton1.addEventListener('click', () => {
+        if (hidden) {
+          content1.classList.remove('hidden');
+          hidden = false;
+        } else {
+            content1.classList.add('hidden');
+            hidden = true;
+        }
+      });
+
+      menuButton2.addEventListener('click', () => {
+        if (hidden) {
+          content2.classList.remove('hidden');
+          hidden = false;
+        } else {
+            content2.classList.add('hidden');
+            hidden = true;
+        }
+      });
+
+      menuButton3.addEventListener('click', () => {
+        if (hidden) {
+          content3.classList.remove('hidden');
+          hidden = false;
+        } else {
+            content3.classList.add('hidden');
+            hidden = true;
+        }
+      });
+    </script>
+  </body>
+</html>

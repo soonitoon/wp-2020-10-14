@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg);
+    background-blend-mode: overlay;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container > * {
+    position: absolute;
+}
+
+.container > h1 {
+    top: 80px;
+    left: 50px;
+    color: white;
+    animation: slide 1.5s;
+}
+
+.container > p {
+    left: 60px;
+    top: 150px;
+    width: 40%;
+    color: #ddd;
+    animation: opacity 3s;
+}
+
+@keyframes slide {
+    from {left: -50%;}
+    to {left: 50px;}
+}
+
+@keyframes opacity {
+    from {opacity:  -50%;}
+    to {opacity: 1;}
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transition03 실습</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <button id="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <h5>My Home Page</h5>
+    </header>
+    <nav id="side-menu" class="hidden">
+        <ul>
+            <li><a href="#">Menu1</a></li>
+            <li><a href="#">Menu2</a></li>
+            <li><a href="#">Menu3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>My Home Page</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ab ipsum voluptates quam aliquid illo maxime qui illum amet reiciendis assumenda, incidunt reprehenderit autem quo suscipit? Ratione labore, dignissimos natus laborum dolorum voluptatem at. Vitae sequi laboriosam voluptas est, dolore consequuntur velit consequatur, cupiditate recusandae deserunt, delectus iste molestias blanditiis odio quasi nam repudiandae architecto quae iusto nulla. Omnis velit animi praesentium, corporis pariatur veniam. Quas fugiat, aliquid, ex similique architecto ad dicta expedita inventore blanditiis, adipisci suscipit dolores. Ad officia molestias corporis itaque omnis, numquam reiciendis, modi ducimus, maxime est eaque alias voluptatum error reprehenderit corrupti. Asperiores dolore sint quisquam voluptatibus est eius tempore atque cum, eaque nam suscipit eveniet unde molestias in ipsum mollitia eos ea doloremque nisi veritatis! Cumque quibusdam, placeat quod animi quisquam neque quo, esse reprehenderit optio laboriosam doloribus obcaecati perspiciatis, non temporibus maxime. Dolore maxime cum laudantium similique aliquid excepturi inventore labore ex, ipsum, libero a voluptatum cumque ratione quas atque nisi dolorum eius nihil ipsa nulla aspernatur amet voluptatibus. Ut nam ad, natus, animi ratione nihil eaque minus eveniet vitae voluptatum repellat dolorum, dolores tenetur est ducimus ipsa mollitia praesentium sed fugiat cupiditate sunt. Explicabo neque aut quod velit nihil ipsam commodi facere suscipit numquam voluptatibus doloribus obcaecati assumenda fugit dolor consequuntur, mollitia ipsa! Officiis libero ipsam iure minima, at eum neque delectus vero cumque ullam porro? Nesciunt ullam dicta, laborum cupiditate nisi corporis sit totam qui tempora tenetur libero labore, recusandae sed eius, assumenda sequi. Iste assumenda similique repellendus quibusdam et. Sequi, provident quibusdam perferendis fuga magnam ratione similique suscipit? Magni veniam, in ut numquam atque doloremque unde dolorum esse minus ducimus ullam vel harum consectetur voluptas dicta laudantium velit, earum, voluptatum sed! Nulla architecto ullam aperiam ipsa? Dolor officiis autem optio eaque eos? Perspiciatis excepturi perferendis nostrum officiis eaque praesentium ea tempore temporibus consequatur, vero dicta eius dolore nemo labore! Omnis unde veniam, aliquam eaque et voluptatem totam hic aliquid magni repellendus corrupti, voluptas necessitatibus quidem minima! Aut porro quae voluptatem odit voluptatibus velit praesentium inventore optio mollitia illo unde nulla natus neque beatae ab sequi, voluptates sapiente eum autem molestias quas ut quia sit? A recusandae dolore veritatis atque, sit cupiditate velit maxime omnis iure sed illum! Saepe molestiae ullam architecto laudantium hic esse debitis suscipit fugit voluptatibus magnam beatae dolorum officiis, aliquam numquam! Asperiores ex necessitatibus ea, possimus sapiente, molestias id officia quo doloremque explicabo quibusdam perferendis pariatur. Incidunt natus nobis et ea id magni provident vitae perferendis cum quasi dolores, fugit rem iusto alias est blanditiis praesentium ducimus? Ratione at, dolorem unde obcaecati deleniti officiis praesentium fuga tempore sed quibusdam neque suscipit omnis repellendus voluptatum nisi quidem illo recusandae ad cupiditate culpa eos sint libero veniam! Iure quae voluptatum dolore eligendi, aliquid incidunt! Officia itaque illo odio maxime eum aspernatur ea corporis nobis nam ratione minus maiores doloremque, nulla recusandae, vel consequuntur? Dolor odit quaerat dolore minima aperiam numquam non quas doloremque fuga fugiat quia placeat corporis architecto iste sit ipsum itaque ratione voluptate nulla aliquam, nam deleniti!</p>
+    </main>
+
+    <script>
+        let hidden = true;
+        const menuButton = document.getElementById('menu-button');
+        const sideMenu = document.getElementById('side-menu');
+
+        menuButton.addEventListener('click', () => {
+            if (hidden) {
+                sideMenu.classList.remove('hidden');
+                hidden = false;
+            } else {
+                sideMenu.classList.add('hidden');
+                hidden = true;
+            }
+        });
+    </script>
+</body>
+</html>

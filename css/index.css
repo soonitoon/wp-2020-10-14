@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    width: 700px;
+    height: auto;
+    margin: 100px auto;
+    border: 2px solid darkgray;
+  }
+.menu {
+  height: 47px;
+}
+.menu-bar {
+    display: flex;
+}
+.menu-bar > button {
+   width: 160px;
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    transition: all 200ms linear;
+}
+.menu-bar > button:focus {
+  outline: none;
+}
+
+.menu-bar > button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: white;
+}
+.menu-content > div {
+  background-color: darkgray;
+  width: 60px;
+  padding: 10px 50px;
+  z-index: 10;
+}
+.menu-content > div > ul {
+  list-style: none;
+}
+.menu-content > div > ul > li {
+  margin: 10px auto;
+}
+.menu-content > div > ul > li:hover {
+  font-weight: bold;
+}
+.menu-content {
+  display: flex;
+}
+.hidden {
+  visibility: hidden;
+}
+.page-name {
+    position: relative;
+}
+.name-h1 {
+    font-size: 50px;
+    position: absolute;
+    color: white;
+    top: 40px;
+    left: 40px;
+    animation: slide-to-right 1.5s;
+}
+.name-lorem {
+    font-size: 20px;
+    position: absolute;
+    color: white;
+    bottom: 80px;
+    left: 180px;
+    animation: slide-to-up 1.5s;
+}
+section {
+    display: grid;
+    grid-template: repeat(3, 1fr) repeat(3, 1fr);
+    grid-template-areas:
+      "section1 section1 aside"
+      "section1 section1 aside"
+      "photo section2 section2";
+    gap: 20px;
+}
+.section1 {
+    grid-area: section1;
+    padding: 20px 20px
+}
+.section2 {
+    grid-area: section2;
+    padding: 20px 20px;
+}
+.aside {
+    grid-area: aside;
+    padding: 20px 20px;
+}
+.photo {
+    grid-area: photo;
+    padding: 20px 20px
+}
+.photo > img {
+  transition-duration: 0.5s;
+}
+.photo > img:hover {
+  transform: scale(1.5);
+  z-index: 10;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+footer {
+    height: 100px;
+    background-color: darkgray;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.copyright {
+    width: auto;
+    margin: 0px auto;
+}
+
+@keyframes slide-to-right {
+  from {
+    left: -50%;
+    opacity: 0.1;
+  }
+  to {
+    left: 40px;
+    opacity: 1;
+    }
+}
+@keyframes slide-to-up {
+  from {
+    bottom: -50%;
+    opacity: 0.1;
+  }
+  to {
+    bottom: 80px;
+    opacity: 1;
+  }
+}

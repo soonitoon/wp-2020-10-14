@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transform 실습</title>
+    <style>
+        body {
+            width: 200px;
+            margin: 200px auto;
+            perspective: 1200px;
+        }
+
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transition: all 10s ease;
+            transform-style: preserve-3d;
+            animation: cube 6s linear 0s infinite;
+        }
+
+        @keyframes cube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+        .face {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.3;
+            backface-visibility: visible;
+            font-weight: bold;
+            font-size: 100px;
+            display: flex;
+            align-items: center;
+        }
+        .face:nth-child(1) {
+            background-color: red;
+            transform: rotateY(0deg) translate3d(0px, 0px, 100px);
+        }
+        .face:nth-child(2) {
+            background-color: orange;
+            transform: rotateY(90deg) translate3d(0px, 0px, 100px);
+        }
+        .face:nth-child(3) {
+            background-color: yellow;
+            transform: rotateY(180deg) translate3d(0px, 0px, 100px);
+        }
+        .face:nth-child(4) {
+            background-color: green;
+            transform: rotateY(270deg) translate3d(0px, 0px , 100px);
+        }
+        .face:nth-child(5) {
+            background-color: blue;
+            transform: rotateX(90deg) translate3d(0px, 0px, 100px);
+        }
+        .face:nth-child(6) {
+            background-color: darkblue;
+            transform: rotateX(270deg) translate3d(0px, 0px, 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="face">1</div>
+        <div class="face">2</div>
+        <div class="face">3</div>
+        <div class="face">4</div>
+        <div class="face">5</div>
+        <div class="face">6</div>
+    </div>   
+</body>
+</html>

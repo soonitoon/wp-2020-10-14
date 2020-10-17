@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transform 실습</title>
+    <style>
+        section {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            border: 5px solid #000;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            transition: all 2s ease;
+            transform-origin: left bottom;
+        }
+        div:hover {
+            transform: rotate(60deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>
